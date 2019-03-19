@@ -18,3 +18,9 @@ for (let i = 0; i < 10; i++) {
 //agora usando let realmente irá funcionar diferente do exemplo usando o VAR
 funcs[2]()
 funcs[8]()
+
+for (let index = 0; index < 10; index++) {
+    // const element = array[index];
+    console.log(index)
+    
+}

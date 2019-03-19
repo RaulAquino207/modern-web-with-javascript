@@ -21,7 +21,7 @@ console.log(faculdade.substring(0,3))
 
 console.log('facul '.concat(faculdade).concat('!'))
 
-console.log(faculdade.replace("e",'3'))
+console.log(faculdade.replace("e",'3'), 'faculdade'.replace("e", '3'))
 
 console.log('Ana, Raul, Pedro, Muninha'.split(','))
 

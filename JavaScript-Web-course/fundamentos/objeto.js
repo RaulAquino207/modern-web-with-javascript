@@ -14,8 +14,8 @@ console.log(produto)
 console.log(produto2)
 
 //é possivel criar objeto dentro de um objeto
-/*
-const produto = {
+
+const produto3 = {
     nome: 'Camisa Polo',
     preco: 79.90,
     objeto: {
@@ -25,4 +25,5 @@ const produto = {
         }
     }
 }
-*/
+
+console.log(produto3)
