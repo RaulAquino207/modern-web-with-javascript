@@ -2,10 +2,11 @@
 const pessoa = {
     nome: 'Ana',
     idade: 30,
-    //sobrenome: 'Julia',
+    // sobrenome: 'Julia',  
     endereco: {
         rua: 'Rua Capitão Manoel Bandeira',
-        numero: 839
+        numero: 839,
+        cep: '61940-170'
     }
 }
 const { nome, idade} = pessoa //tirando os atributos nome e idade do OBJETO pessoa
