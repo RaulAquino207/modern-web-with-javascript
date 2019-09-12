@@ -1,4 +1,5 @@
 function Pessoa(){
+    console.log('entrou na função')
     this.idade = 0
 
     setInterval(() => {
@@ -6,5 +7,5 @@ function Pessoa(){
         console.log(this.idade)
     }, 1000)
 }
-
+console.log('TESTE')
 new Pessoa
