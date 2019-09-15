@@ -1,4 +1,5 @@
-Object.prototype.attr0 = 'Object'
+Object.prototype.attr0 = 'Object' //Não faça isso em casa!
+
 const avo = {attr1: 'Avo'}
 //para fazer a referencia de pai para o avo é necessário usar o __proto__: nome da classe mais acima
 const pai = {__proto__: avo, attr2: 'Pai', attr3:'PAIFILHO'}

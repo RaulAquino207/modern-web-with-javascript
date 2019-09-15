@@ -10,3 +10,18 @@ String.prototype.reverse = function(){
 }
 
 console.log('Raul Aquino'.reverse())
+
+//Agora criando um método para o prototype de Array
+Array.prototype.first = function(){
+    return this[0]
+}
+
+const vetor = ['Raul', 'Mona', 'Nityananda', 'Rodrigo']
+console.log(vetor.first())
+
+//Cuidado ao mudar métodos já existentes
+String.prototype.toString = function(){
+    return 'Lascou tudo'
+}
+//Pelo fato de mudança no toString ele irá mudar a string definidas acima
+console.log('Raul Aquino'.reverse())
