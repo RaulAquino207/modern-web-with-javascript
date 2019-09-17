@@ -10,8 +10,8 @@ aprovados.forEach(function(nome,indice, array){
     console.log(array)
     console.log()
 })
-
-aprovados.forEach(nome => console.log(nome))
+console.log('Usando arrowfunction')
+aprovados.forEach((nome,index) => console.log(`${index+1})${nome}`))
 console.log()
 const exibirAprovados = aprovado => console.log(aprovado)
 aprovados.forEach(exibirAprovados)
