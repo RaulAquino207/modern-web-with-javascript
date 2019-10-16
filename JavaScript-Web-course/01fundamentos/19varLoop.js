@@ -1,10 +1,10 @@
-/*
+
 for (var i = 0; i < 10; i++){
     console.log(i)
 }
 //o valor i será o valor que fez ele sair de dentro do laço de repetição
 console.log('i =',i)
-*/
+
 
 //problema histórico do JS
 //array vazio

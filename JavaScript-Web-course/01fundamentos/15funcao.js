@@ -18,5 +18,5 @@ const subtracao = (a,b) => a - b
 console.log(subtracao(2,3))
 
 //exemplo
-const imprimir = a => console.log(a)
-imprimir("Legal")
+const imprimir2 = a => console.log(a)
+imprimir2("Legal")
