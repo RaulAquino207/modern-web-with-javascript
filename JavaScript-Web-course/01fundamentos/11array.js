@@ -7,7 +7,8 @@ console.log(valores[4])
 valores[10] = 10
 console.log(valores)
 console.log(valores.length)
-
+valores.sort()
+console.log(valores)
 //adicionando valores novos ao vetor
 
 valores.push({id:3}, false, null, 'teste')
