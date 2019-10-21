@@ -19,10 +19,6 @@ media = array.reduce(function(acumulador, valorAtual){
     return acumulador + valorAtual
 })/array.length
 console.log(array.filter(function(nota){
-    if(nota >= media){
-        return true
-    }else{
-        return false
-    }
+    return nota > media
 }))
 
