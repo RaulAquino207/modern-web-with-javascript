@@ -18,12 +18,12 @@ console.log(saudacao.ola)
 
 //Também existe módulos que vem por padrão com o node, como por ex o http
 
-// const http = require('http')
-// // console.log(http)
-// http.createServer((req,res) => {
-//     res.write('Bom dia!')
-//     res.end()
-// }).listen(8080)
+const http = require('http')
+// console.log(http)
+http.createServer((req,res) => {
+    res.write('Bom dia!')
+    res.end()
+}).listen(8080)
 
 /*
 Dentro da minhas pastaC há um arquivo index.js, logo eu não preciso referencia-lo por conta de
