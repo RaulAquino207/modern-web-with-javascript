@@ -10,6 +10,7 @@ utilizar de uma das ideias do Node que é exportar algo e de importar algo).
 */
 //Forma para que o arquivo consiga ser visível em outros módulos
 //Utilizando o this
+console.log(this) //This retorna um objeto vazio e a partir dele vão se adicionando atributos, funções e etc
 this.ola = "Fala pessoal"
 //Outra forma seria utilizando o exports
 exports.bemVindo = "Bem vindo ao node!"
