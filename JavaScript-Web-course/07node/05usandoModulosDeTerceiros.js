@@ -5,6 +5,7 @@ pasta chamada node_modules
 Agora vamos importar modulos de terceiros, nesse caso de lodash
  */
 //Geralmente quando se cria um referencia para o lodash se o _(underline antes)
+//OBS:RODAR ISSO AQUI COM NODEMON pelo terminal nodemoon 05usandoModulosDeTerceiros.js
  const _ = require('lodash')
  setInterval(() => console.log(_.random(5,1000)),2000)
 
