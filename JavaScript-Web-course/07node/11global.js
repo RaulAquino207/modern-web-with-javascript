@@ -7,7 +7,17 @@
 /**
  * A partir daqui esse MinhaApp, será visivel em todos os arquivos criados
  */
-global.MinhaApp = Object.freeze({
+
+//Dessa forma poderá ser alterado em qualquer módulo
+// global.MinhaApp = {
+//     saudacao(){
+//         return console.log('Estou em todos os lugares!')
+//     },
+//     nome: 'Sistema global'
+// }
+
+//E dessa forma usando o Object.freeze não poderá ser alterado
+ global.MinhaApp = Object.freeze({
     saudacao(){
         return console.log('Estou em todos os lugares!')
     },

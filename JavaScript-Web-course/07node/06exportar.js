@@ -22,3 +22,5 @@ console.log(module.exports)
 module.exports = {
     publico: true
 }
+
+console.log(module.exports)

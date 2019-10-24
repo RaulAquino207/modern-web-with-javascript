@@ -1,5 +1,5 @@
 /*
-Forma mais comumente utulizada, atribuindo o novo objeto para modulo.exports e assim está 
+Forma mais comumente utilizada, atribuindo o novo objeto para modulo.exports e assim está 
 disponivel para fora do módulo
 
 Quando eu uso module.exports, eu estou alterando o objeto padrão, como foi mostrado no móduloA
