@@ -22,5 +22,5 @@ console.log(module.exports)
 module.exports = {
     publico: true
 }
-
+module.exports.dia = 'Bom dia'
 console.log(module.exports)

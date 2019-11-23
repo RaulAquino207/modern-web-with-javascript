@@ -25,7 +25,7 @@ console.log(moduloA.ola)
 console.log(moduloA.bemVindo)
 console.log(moduloA.ateLogo)
 /*
-Mesmo não sido criando um objeto em si no móduloA, quando fazemos console.log(moduloA), ele
+Mesmo não sido criado um objeto em si no móduloA, quando fazemos console.log(moduloA), ele
 retorna um objeto com tudo que foi definido no mesmo
 */
 console.log(moduloA)

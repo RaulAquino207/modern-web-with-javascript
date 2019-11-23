@@ -16,3 +16,4 @@ this.ola = "Fala pessoal"
 exports.bemVindo = "Bem vindo ao node!"
 //Forma geralmente mais utilizando para exportar algo
 module.exports.ateLogo = "Até o próximo exemplo"
+console.log(this)
