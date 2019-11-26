@@ -2,8 +2,10 @@
   "name": "07exfuncionarios",
   "version": "1.0.0",
   "description": "Exemplo referente a aula de package.json",
-  "main": "07falandoSobrePackageJson.js",
+  "main": "08funcionarios.js",
   "scripts": {
+    "start": "nodemon",
+    "dev": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Raul",
