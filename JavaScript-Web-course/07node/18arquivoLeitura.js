@@ -5,7 +5,7 @@ const caminho = __dirname + '/17arquivo.json'
 const conteudo = fs.readFileSync(caminho, 'utf-8')
 console.log(conteudo)
 
-//Lendo o arquivo de forma ASINCRONA
+//Lendo o arquivo de forma ASSINCRONA
 fs.readFile(caminho, 'utf-8' , (err, conteudo) => {
     const config = JSON.parse(conteudo)
     console.log(`${config.db.host}:${config.db.port}`)
