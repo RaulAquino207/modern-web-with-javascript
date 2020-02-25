@@ -36,9 +36,10 @@
  //também é possivel ver a quantidade de elementos dentro do MAP
  console.log(chavesVariadas.size)
 
- //No MAP não é possivel ter 2 valores igual
+ //No MAP não é possivel ter 2 valores igual do lado da chave
  chavesVariadas.set('123', 'a')
  chavesVariadas.set('123', 'b')
+ //Porém do lado do valor é possivel repetição
  chavesVariadas.set('456', 'b')
 
  console.log(chavesVariadas)
