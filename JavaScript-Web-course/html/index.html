@@ -1,0 +1,48 @@
+<!--
+    PARA ACESSAR ESSE ARQUIVO VIA O HTTP-SERVER, basta ir no terminal e digitar "http-server ." e caso queira mudar
+    a porta basta fazer "http-server -p 3030"
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Exercícios HTML</h1>
+    </header>
+    <!-- Aqui criamos um link para a pasta apresentada no link, que vai ser incrementada a cada exercicio feito-->
+    <nav>
+        <a href="06exercicios/06teste.html">00 - Teste</a> |
+        <a href="06exercicios/06temp.html">00 - TEMP</a>
+    </nav>
+    <!-- Dentro dessa section será colocado cada um das páginas que forem carregadas a partir das navegações acima -->
+    <section id="conteudo"></section>
+    <footer>
+        <br>
+        Curso de WEB
+    </footer>
+    <!-- O intuito desse exercicio é fazer que quando eu clique em um determinado link, ele pegue o conteúdo desse
+    link e jogue ele dentro do meu SECTION, logo não irá me redirecionar para outra página. Então usaremos requisições
+    AJAX, com scripts em JS -->
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+            console.log(link)
+            const conteudo = document.getElementById('conteudo')
+            link.onclick = function(e){
+                //Esse preventDefault ele impede que a mudança/navegação de páginas ocorra
+                e.preventDefault()
+                // console.log('CLICK!!!')
+                //Com o fetch faremos uma requisição AJAX para pegar o conteúdo do outra página usando PROMISES
+                //href pega a referência, ou seja, conteúdo daquela página como mostrado na linha 18
+                fetch(link.href)
+                //.text() é uma fução que pega o conteúdo HTML da página
+                    .then(res => res.text())
+                    .then(html => conteudo.innerHTML = html)
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-const porta = 3003
+const porta = 3000
 
 const express = require('express')
 const bancoDeDados = require('./22bancoDeDados')

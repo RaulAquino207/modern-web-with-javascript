@@ -4,22 +4,53 @@
         <!-- no style teremos código escrito em CSS -->
         <!-- vc irá fazer a junção do CSS em cima das TAGs criadas-->
         <!-- atrás dos "ID", praticamente todas as tags possuem ID-->
+
+        <!-- REFERENCIANDO O CSS DO ARQUIVO 04-->
+        <link rel="stylesheet" href="04poucoDeCss.css">
         <style>
             /* referenciando h1 */
             /* pode ser "h1, span" -> para aplicar em ambos*/
             h1 {
+                font-size: 200px;
                 /*display: none -> faria o conteudo de h1 desaparecer*/
                 /*display: none*/
-                background-color: red
+                background-color: red;
+                /*
+                position: absolute;
+                top: 400px;
+                left: 400px;
+                */
             }
+            /* Para determinar uma classe se usa a notação do ".nomeDaClasse"*/
+            .fundoVermelho {
+                background-color: red;
+            }
+
+            .negrito {
+                font-weight: bold;
+            }
+
+            /* Agora quando se quer aplicar o CSS para um ID específico, se usa o #*/
+           
+
         </style>
     </head>
     <body>
         <h1>CSS</h1>
         <!-- br quebra linha-->
-        <span id="textoPrincipal">TEXTO 1</span><br>
+        <!-- Também é possivel colocar o CSS juntamente na TAG
+        <span id="textoPrincipal" style = "display: none;">TEXTO 1</span><br><br>-->
+        <span id="textoPrincipal">TEXTO 1</span><br><br>
         <!-- ou podemos usar o class, que assim podemos referenciar várias tags à partir dessa class-->
-        <span class="fundoVermelho negrito">TEXTO 2</span><br>
-        <span class="fundoVermelho">TEXTO 3</span>
+        <span class="fundoVermelho negrito">TEXTO 2</span><br><br>
+        <!-- É possivel eu conseguir pegar determinado atributo pelo browser, como por exemplo esse raul-atributo-->
+        <!-- Basta eu usar document.querySelector('[raul-atributo]')-->
+        <!-- Da mesma forma eu consigo pegar tanto ID's como Class's, utilizando:
+            ID's:
+            document.querySelector('#testoPrincipal')
+            Class's:
+            document.querySelector('.fundoVermelho')
+        -->
+        <span class="fundoVermelho raul-atributo">TEXTO 3</span>
     </body>
 </html>

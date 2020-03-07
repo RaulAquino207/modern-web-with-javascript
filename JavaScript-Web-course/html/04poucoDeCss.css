@@ -1,0 +1,11 @@
+/*
+Também é possível criar o CSS fora da página HTML, e referência-lo na mesma.
+Utilizando o exemplo passando, colocando aqui somente o CSS do ID
+*/
+#textoPrincipal {
+    font-size:200px;
+    font-weight: bold;
+    background-color: #444;
+    padding: 100px;
+    color: white;
+}
