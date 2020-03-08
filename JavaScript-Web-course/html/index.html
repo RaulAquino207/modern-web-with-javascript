@@ -1,4 +1,4 @@
-<!--
+<!--ESTE ARQUIVO SERÁ USADO DURANTE TODO O MÓDULO DE EXERCÍCIOS.
     PARA ACESSAR ESSE ARQUIVO VIA O HTTP-SERVER, basta ir no terminal e digitar "http-server ." e caso queira mudar
     a porta basta fazer "http-server -p 3030"
 -->
@@ -8,6 +8,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #conteudo {
+            padding: 30px 0px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -15,19 +20,34 @@
     </header>
     <!-- Aqui criamos um link para a pasta apresentada no link, que vai ser incrementada a cada exercicio feito-->
     <nav>
+        <!-- Também podemos armazenar nosso link em um atributo-->
+
+        <!-- OBS 1 DE OUTRA FORMA, armazenando o conteúdo de href em um atributo (web-link)
+        <a href web-link = "06exercicios/06teste.html">00 - TESTE</a>
+        -->
+
         <a href="06exercicios/06teste.html">00 - Teste</a> |
-        <a href="06exercicios/06temp.html">00 - TEMP</a>
+
+        <!-- OBS 2 DE OUTRA FORMA
+        <a href web-link = "06exercicios/06temp.html">00 - TEMP</a>-->
+        
+        <a href="06exercicios/06temp.html">00 - TEMP</a> |
+        <a href="06exercicios/08texto1.html">01 - TEXTO 1</a> |
+        <a href="06exercicios/09texto2.html">02 - TEXTO 2</a>
     </nav>
     <!-- Dentro dessa section será colocado cada um das páginas que forem carregadas a partir das navegações acima -->
     <section id="conteudo"></section>
     <footer>
-        <br>
         Curso de WEB
     </footer>
     <!-- O intuito desse exercicio é fazer que quando eu clique em um determinado link, ele pegue o conteúdo desse
     link e jogue ele dentro do meu SECTION, logo não irá me redirecionar para outra página. Então usaremos requisições
     AJAX, com scripts em JS -->
     <script>
+
+        //OBS 3 utilizando da outra forma
+
+        //document.querySelectorAll('[web-link]').forEach(link => {...})
         document.querySelectorAll('a').forEach(link => {
             console.log(link)
             const conteudo = document.getElementById('conteudo')
@@ -37,6 +57,9 @@
                 // console.log('CLICK!!!')
                 //Com o fetch faremos uma requisição AJAX para pegar o conteúdo do outra página usando PROMISES
                 //href pega a referência, ou seja, conteúdo daquela página como mostrado na linha 18
+
+                //OBS 4 DE OUTRA FORMA seria fetch(link.getAtribute('web-link'))
+
                 fetch(link.href)
                 //.text() é uma fução que pega o conteúdo HTML da página
                     .then(res => res.text())
