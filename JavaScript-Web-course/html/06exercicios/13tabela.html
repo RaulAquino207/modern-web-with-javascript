@@ -1,0 +1,72 @@
+<!-- A TAG que define uma tabela é a <table></table>-->
+<!-- border serve pra dar um ESTILO de tabela-->
+<!-- <table border="1"> -->
+<table>
+    <!-- Para informar o que essa tabela representa se usa o caption-->
+    <caption>Produtos</caption>
+    <!-- Tabela geralmente tem 3 partes importantes: cabeçalho, corpo e o rodapé-->
+    
+    <!-- Cabeçalho da tabela é representado por thead-->
+    <thead>
+        <!-- Primeira coisa a se definir é a linha, representado por tr (table row)-->
+        <tr>
+            <!-- E dentro do tr, colocamos o th(table head)-->
+            <!-- Cabeçalho das 4 colunas -->
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+
+    <!-- Agora os dados vão dentro do tbody-->
+    <tbody>
+        <tr>
+            <!-- Os dados ficam dentro do td (table data)-->
+            <td>iPad</td>
+            <td>7000,00</td>
+            <td>5</td>
+            <td>35000,00</td>
+        </tr>
+
+        <tr>
+            <td>Macbook</td>
+            <td>15000,00</td>
+            <td>2</td>
+            <td>30000,00</td>
+        </tr>
+    </tbody>
+
+    <!-- Como dito anteriormente é possivel colocar um rodapé na tabela, através do tfoot-->
+    <tfoot>
+        <tr>
+            <!-- colspan faz com que uma linha ocupe mais de espaço, neste caso 3-->
+            <td colspan="3">Total</td>
+            <td>65000,00</td>
+        </tr>
+    </tfoot>
+</table>
+
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    th,td {
+        padding: 10px;
+    }
+
+    thead tr {
+        border-bottom: solid 3px #444444;
+    }
+
+    tbody tr:hover {
+        background-color: #dedede;
+    }
+
+    tfoot {
+        background-color: #444444;
+        color: #fff;
+        font-weight: bold;
+    }
+</style>
