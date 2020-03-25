@@ -1,11 +1,36 @@
 <h1>LINKS</h1>
 <!--URL absoluta -->
 <!-- Dessa primeira forma ele abre a aba do google na mesma aba -->
-<a href="http://www.google.com.br">Google 1</a><br>
+<a id="inicio" href="http://www.google.com.br">Google 1</a><br>
 <!-- Usando o target="_blank" ele abre o google em outra aba-->
-<a href="http://www.google.com.br" target="_blank">Google 2</a>
+<a href="http://www.google.com.br" target="_blank">Google 2</a><br><br>
 
 <!-- URL relativas -->
 <a href="index.html">Voltar 1</a><br>
 <a href="/index.html">Voltar 2</a><br>
-<a href="../index.html">Voltar 3</a><br>
+<a href="../index.html">Voltar 3</a><br><br>
+
+<!-- Ainda sobre LINKS, é possível criar links para se navegar dentro da mesma página usando o conceito de ancora 
+e também é possivel criar links que apontam para emails, ou seja, o link direciona o usuário para enviar um email -->
+
+<!-- É na tag a, usar no href o "mailto:email@exemplo.com" -->
+<a href="mailto:aquinoraul207@gmail.com">Entre em contato</a><br><br>
+
+
+<!-- 
+    div#param - cria uma tag com o ID do param passado
+    EX: div#noticia - <div id="noticia"></div>
+    spam.param - cria uma tag com a CLASSE do param passado
+    EX: spam.teste - <spam class="teste"></spam>
+-->
+
+<!-- Abaixo vamos gerar um texto muito abaixo da página e logo iremos criar um link para o texto mais abaixo-->
+<div id="noticia" style="position: absolute;top: 2000px;">
+    <h1>NOTÍCIA BOMBA!</h1>
+    <p>Não era nada :)</p>
+    <a href=#inicio>Voltar inicio</a>
+
+</div>
+
+<!-- Para fazer o link até um elemento na mesma página, basta referenciar com o id da tag, no caso do exemplo abaixo #noticia-->
+<a href="#noticia">Ir para noticia</a>

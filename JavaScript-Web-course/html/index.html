@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exercícios</title>
     <style>
         #conteudo {
             padding: 30px 0px;
@@ -26,17 +26,17 @@
         <a href web-link = "06exercicios/06teste.html">00 - TESTE</a>
         -->
 
-        <a href="06exercicios/06teste.html">00 - Teste</a> |
+        <a href ="06exercicios/06teste.html">00 - Teste</a> |
 
         <!-- OBS 2 DE OUTRA FORMA
         <a href web-link = "06exercicios/06temp.html">00 - TEMP</a>-->
         
-        <a href="06exercicios/06temp.html">00 - TEMP</a> |
-        <a href="06exercicios/08texto1.html">01 - TEXTO 1</a> |
-        <a href="06exercicios/09texto2.html">02 - TEXTO 2</a> |
-        <a href="06exercicios/10listas.html">03 - LISTA</a>|
-        <a href="06exercicios/11listaAninhada.html">04 - LISTAS ANINHADAS</a> |
-        <a href="06exercicios/12links.html">05 - LINKS</a> |
+        <a href ="06exercicios/06temp.html">00 - TEMP</a> |
+        <a href ="06exercicios/08texto1.html">01 - TEXTO 1</a> |
+        <a href ="06exercicios/09texto2.html">02 - TEXTO 2</a> |
+        <a href ="06exercicios/10listas.html">03 - LISTA</a>|
+        <a href ="06exercicios/11listaAninhada.html">04 - LISTAS ANINHADAS</a> |
+        <a href ="06exercicios/12links.html">05 - LINKS</a> |
     </nav>
     <!-- Dentro dessa section será colocado cada um das páginas que forem carregadas a partir das navegações acima -->
     <section id="conteudo"></section>
@@ -51,20 +51,30 @@
         //OBS 3 utilizando da outra forma
 
         //document.querySelectorAll('[web-link]').forEach(link => {...})
+        // document.querySelectorAll('[web-link]').forEach(link => {
+        //     const conteudo = document.getElementById('conteudo')
+        //     link.onclick = function(e){
+        //         e.preventDefault()
+
+        //         fetch(link.getAttribute('web-link'))
+        //             .then(res => res.text())
+        //             .then(html => conteudo.innerHTML = html)
+        //     }
+        // })
         document.querySelectorAll('a').forEach(link => {
             console.log(link)
             const conteudo = document.getElementById('conteudo')
             link.onclick = function(e){
-                //Esse preventDefault ele impede que a mudança/navegação de páginas ocorra
+                // Esse preventDefault ele impede que a mudança/navegação de páginas ocorra
                 e.preventDefault()
                 // console.log('CLICK!!!')
-                //Com o fetch faremos uma requisição AJAX para pegar o conteúdo do outra página usando PROMISES
-                //href pega a referência, ou seja, conteúdo daquela página como mostrado na linha 18
+                // Com o fetch faremos uma requisição AJAX para pegar o conteúdo do outra página usando PROMISES
+                // href pega a referência, ou seja, conteúdo daquela página como mostrado na linha 18
 
-                //OBS 4 DE OUTRA FORMA seria fetch(link.getAtribute('web-link'))
+                // OBS 4 DE OUTRA FORMA seria fetch(link.getAtribute('web-link'))
 
                 fetch(link.href)
-                //.text() é uma fução que pega o conteúdo HTML da página
+                // // .text() é uma fução que pega o conteúdo HTML da página
                     .then(res => res.text())
                     .then(html => conteudo.innerHTML = html)
             }
